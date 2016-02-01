@@ -4,20 +4,24 @@
     <p>
         <label class="item item-input">
             <span class="input-label">Server</span>
-            <input type="text">
+            <input type="text" ng-model="mqtt.server">
         </label>
         <label class="item item-input">
             <span class="input-label">Username</span>
-            <input type="text">
+            <input type="text" ng-model="mqtt.username">
         </label>
         <label class="item item-input">
             <span class="input-label">Password</span>
-            <input type="password">
+            <input type="password" ng-model="mqtt.password">
         </label>
         <label class="item item-input">
             <span class="input-label">Port</span>
-            <input type="number">
+            <input type="number" ng-model="mqtt.port">
         </label>
+        <ion-toggle ng-model="mqtt.ssl" toggle-class="toggle-calm">SSL</ion-toggle>
+        <button ng-class="class" ng-click="connect()">
+            Connect
+        </button>
     </p>
   </ion-content>
 </ion-view>
