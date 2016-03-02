@@ -12,9 +12,6 @@ angular.module('iotApp.services', [])
         console.log("onConnect");
         mqtt.client.subscribe("#");
     };
-    mqtt.onFailure=function onFailure(invocationContext, errorCode, errorMessage) {
-         console.log("error");
-    };
     return mqtt;
 }
 );

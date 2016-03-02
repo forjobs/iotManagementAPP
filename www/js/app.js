@@ -52,6 +52,15 @@ angular.module('iotApp', ['ionic','ngCordova','iotApp.controllers','iotApp.servi
           controller: 'deviceController'
         }
       }
+    })
+   .state('tab.maps', {
+      url: '/maps',
+      views: {
+        'tab-maps': {
+          templateUrl: 'templates/tab-maps.html',
+          controller: 'mapsController'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/setup');
